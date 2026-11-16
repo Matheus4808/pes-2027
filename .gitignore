@@ -1,0 +1,96 @@
+# =====================================================================
+#  PES 2027 Revolution — site
+#  Nada daqui pode ir para o GitHub. Na dúvida, NÃO comite.
+# =====================================================================
+
+# ---------------------------------------------------------- variáveis e segredos
+# Qualquer .env fica fora. O ÚNICO que vai é o modelo vazio (.env.example).
+.env
+.env.*
+*.env
+!.env.example
+*.local
+
+# chaves, certificados e credenciais
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
+*.asc
+*.gpg
+id_rsa*
+id_ed25519*
+*.ppk
+credentials*
+*credentials*.json
+*.token
+service-account*.json
+.npmrc
+.yarnrc.yml
+
+# rclone / Cloudflare R2 / Wrangler (chaves do bucket)
+rclone.conf
+*.rclone.conf
+.wrangler/
+.dev.vars
+wrangler.toml.local
+
+# Supabase local (pode ter senha do banco e service_role)
+supabase/.temp/
+supabase/.branches/
+supabase/.env
+supabase/**/.env
+supabase/config.local.toml
+
+# ---------------------------------------------------------- build e dependências
+node_modules/
+dist/
+dist-ssr/
+build/
+coverage/
+.vite/
+*.tsbuildinfo
+.eslintcache
+.cache/
+
+# ---------------------------------------------------------- binários do patch (vão pelo R2, nunca pelo git)
+*.exe
+*.dll
+*.7z
+*.7z.*
+*.zip
+*.rar
+*.cpk
+*.r27p
+
+# ---------------------------------------------------------- logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------------------------------------------------------- ferramentas locais / editor / sistema
+.claude/
+.vercel/
+.netlify/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+*.tmp
