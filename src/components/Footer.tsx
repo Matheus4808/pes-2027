@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Download } from 'lucide-react'
 import { site, type SocialKey } from '../config/site'
 import { Logo } from './ui'
-import { navItems, scrollToId } from '../lib/nav'
+import { baixarBeta, navItems, scrollToId } from '../lib/nav'
 
 const year = new Date().getFullYear()
 
@@ -24,7 +24,7 @@ export function FinalCta() {
         <Logo size="lg" />
         <h2>A nova era do futebol <i>começa no seu PC.</i></h2>
         <div className="final__ctas">
-          <button type="button" className="btn btn--volt btn--lg" onClick={() => scrollToId('beta')}><Download size={18} aria-hidden="true" /> Baixar o BETA</button>
+          <button type="button" className="btn btn--volt btn--lg" onClick={baixarBeta}><Download size={18} aria-hidden="true" /> Baixar o BETA</button>
           <button type="button" className="btn btn--ghost btn--lg" onClick={() => scrollToId('edicoes')}>Ver edições <ArrowRight size={18} aria-hidden="true" /></button>
         </div>
       </div>
@@ -52,7 +52,7 @@ export function Footer() {
         </div>
         <div>
           <h4>Patch</h4>
-          <button type="button" onClick={() => scrollToId('beta')}>Download do BETA</button>
+          <button type="button" onClick={baixarBeta}>Download do BETA</button>
           <button type="button" onClick={() => scrollToId('roadmap')}>Roadmap</button>
           <button type="button" onClick={() => scrollToId('lista')}>Contato</button>
         </div>
@@ -94,7 +94,7 @@ export function MobileCta() {
             <b>PES 2027 Revolution</b>
             <span>{site.version} gratuito</span>
           </div>
-          <button type="button" className="btn btn--volt btn--sm" onClick={() => scrollToId('beta')}><Download size={15} aria-hidden="true" /> Baixar</button>
+          <button type="button" className="btn btn--volt btn--sm" onClick={baixarBeta}><Download size={15} aria-hidden="true" /> Baixar</button>
         </motion.div>
       )}
     </AnimatePresence>

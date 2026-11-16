@@ -6,7 +6,7 @@ import menuPrincipal from '../assets/img/menu-principal.webp'
 import escolhaClube from '../assets/img/escolha-clube.webp'
 import classSerieA from '../assets/img/class-serie-a.webp'
 import aovivo from '../assets/img/aovivo-70min.webp'
-import { scrollToId } from '../lib/nav'
+import { baixarBeta, scrollToId } from '../lib/nav'
 import { site } from '../config/site'
 import { competitions } from '../data/competitions'
 
@@ -48,7 +48,7 @@ export function Hero() {
             interface nova, rodada ao vivo e tabelas com a cara de cada competição.
           </motion.p>
           <motion.div className="hero__ctas" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.28, ease }}>
-            <button type="button" className="btn btn--volt btn--lg" onClick={() => scrollToId('beta')}>
+            <button type="button" className="btn btn--volt btn--lg" onClick={baixarBeta}>
               <Download size={18} aria-hidden="true" /> Baixar o BETA grátis
             </button>
             <button type="button" className="btn btn--ghost btn--lg" onClick={() => scrollToId('por-dentro')}>

@@ -2,7 +2,7 @@ import { ArrowRight, Check, Download, Lock, ShoppingCart } from 'lucide-react'
 import { editions, roadmap } from '../data/patch'
 import { site } from '../config/site'
 import { Logo, Reveal, SectionTitle, StatusPill } from './ui'
-import { scrollToId } from '../lib/nav'
+import { baixarBeta, scrollToId } from '../lib/nav'
 
 export function Roadmap() {
   return (
@@ -42,7 +42,7 @@ export function Editions() {
             <ul className="checks">
               {editions.beta.items.map((it) => <li key={it}><Check size={16} aria-hidden="true" />{it}</li>)}
             </ul>
-            <button type="button" className="btn btn--ghost btn--block" onClick={() => scrollToId('beta')}>
+            <button type="button" className="btn btn--ghost btn--block" onClick={baixarBeta}>
               <Download size={16} aria-hidden="true" /> Baixar o BETA
             </button>
           </Reveal>

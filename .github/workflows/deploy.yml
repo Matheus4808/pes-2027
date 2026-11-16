@@ -20,6 +20,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # lê também as Variables do ambiente github-pages (Settings > Environments), além das do repositório
+    environment: github-pages
     steps:
       - uses: actions/checkout@v4
         with:

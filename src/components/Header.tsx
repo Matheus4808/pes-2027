@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X, Download } from 'lucide-react'
 import { Logo } from './ui'
-import { navItems, scrollToId } from '../lib/nav'
+import { baixarBeta, navItems, scrollToId } from '../lib/nav'
 import { site } from '../config/site'
 
 export function Header() {
@@ -49,7 +49,7 @@ export function Header() {
       </nav>
       <div className="header__actions">
         <span className="header__version">{site.version}</span>
-        <button type="button" className="btn btn--volt btn--sm" onClick={() => go('beta')}>
+        <button type="button" className="btn btn--volt btn--sm" onClick={() => { setOpen(false); baixarBeta() }}>
           <Download size={15} aria-hidden="true" /> Baixar BETA
         </button>
       </div>
@@ -65,7 +65,7 @@ export function Header() {
                 {label}
               </button>
             ))}
-            <button type="button" className="btn btn--volt" onClick={() => go('beta')}>
+            <button type="button" className="btn btn--volt" onClick={() => { setOpen(false); baixarBeta() }}>
               <Download size={16} aria-hidden="true" /> Baixar BETA
             </button>
           </motion.div>
